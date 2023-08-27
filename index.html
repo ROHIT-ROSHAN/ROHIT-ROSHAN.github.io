@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,900&family=Roboto:ital,wght@0,400;0,700;0,900;1,100;1,300&family=Ubuntu+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <div class="About">
+
+        <nav>
+            <div class="logo">Rohit Roshan</div>
+            <div class="menu">
+                <a class="menu-item active" href="index.html">About</a>
+                <a class="menu-item" href="WorkExperience.html">Work Experience</a>
+                <a class="menu-item" href="Projects.html">Projects</a>
+                <a class="menu-item" href="Education.html">Education</a>
+            </div>
+        </nav>
+        <div class="contact-details">
+            <img src="Photo.jpeg" class="first">
+            <div class="contact">
+                <div class="row">
+                    <label>Name:</label>
+                    <span>Rohit Roshan</span>
+                </div>
+
+                <div class="row">
+                    <label>Email:</label>
+                    <span>rohitroshan2002@gmail.com</span>
+                </div>
+                <div class="row">
+                    <label>Phone:</label>
+                    <span>+91 7483087847</span>
+                </div>
+                <div class="row">
+                    <label>Country:</label>
+                    <span>India</span>
+                </div>
+                <div class="row">
+                    <label>State:</label>
+                    <span>Karnataka</span>
+                </div>
+                <div class="row">
+                    <label>City:</label>
+                    <span>Bengaluru</span>
+                </div>
+                <div class="row">
+                    <label>Currently Persuing:</label>
+                    <span>B.Tech in Computer Science from PES University</span>
+                </div>
+            </div>
+
+            <!-- Add other details here -->
+        </div>
+    </div>
+    <div class="Description">
+        Hardworking, dedicated and a go getter engineering student. Approaches any problems in a focused and
+        systematic way. Make my own decisions and like to work in creative environments.
+    </div>
+
+
+    <br>
+   
+    <button type="btn" id="download-button"><i class="fas fa-download"></i> Download Resume</button>
+    <button type="btn" onclick="openProject('https://www.linkedin.com/in/rohit-roshan-4b8a35b8/')"><i
+            class="fab fa-linkedin"></i> View on Linkedin</button>
+    <button class="github-btn" onclick="openProject('https://github.com/ROHIT-ROSHAN')">
+        <i class="fab fa-github"></i> View on GitHub
+    </button>
+
+    <script>
+
+
+    document.getElementById("download-button").addEventListener("click", function() {
+            
+            var fileUrl = "https://drive.google.com/file/d/12FpF2OeTLTvdMFmC7i8WZArVRHy9mern/view?usp=sharing";
+            
+           
+            var a = document.createElement("a");
+            a.href = fileUrl;
+            a.download = "ROHIT RESUME.pdf"; 
+            a.target = "_blank";
+
+            
+            if (document.createEvent) {
+                var event = document.createEvent("MouseEvents");
+                event.initEvent("click", true, true);
+                a.dispatchEvent(event);
+            } else {
+                a.click(); 
+            }
+        });
+
+    </script>
+</body>
+<style>
+    .menu-item.active {
+        background-color: #00bfff;
+    }
+
+    button {
+        width: 250px;
+        margin-top: 5vb;
+        margin-right: 10px;
+        padding: 12px;
+        background: #3f3f3f;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+
+    }
+
+    body {
+        background-color: rgb(21, 21, 21);
+        margin: 50px;
+        
+        /* Remove default margin */
+    }
+
+    .About>nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1d1e1f;
+        padding: 10px 20px;
+        border-radius: 10px;
+        
+    }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        
+    }
+    @media (max-width: 743px) {
+        .menu {
+                display: flex;
+                flex-direction: column; /* Change the flex direction to vertical */
+            }
+
+            .menu-item {
+                margin-bottom: 10px; /* Add some margin between menu items */
+            }
+
+            .menu-item.active {
+                background-color: #00bfff;
+            }
+
+            .contact-details {
+                flex-direction: column; /* Change the flex direction to vertical */
+                 /* Center the contact details content */
+                max-width: 240px;
+                
+                
+            }
+
+            .contact {
+                margin-top: 20px; /* Add margin between photo and contact details */
+                font-size: 14px;
+                border: 1px solid #ccc; /* Add white border for contact details section */
+                padding: 20px; /* Add some padding for the contact details section */
+                border-radius: 10px; /* Add border radius for a rounded look */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+                background-color: #1d1e1f; /* Set the background color for the contact details section */
+                color: white; /* Set text color to white */
+                max-width: 220px; /* Limit the width of the contact details section */
+            }
+
+            .contact .row {
+                margin-bottom: 10px; /* Add some margin between contact detail rows */
+            }
+        }
+
+    .menu-item {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        flex-grow: 1;
+    }
+
+    .menu-item:hover {
+        background-color: #00bfff;
+    }
+
+    .first {
+        height: 200px;
+        width: 301px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .Description {
+        color: white;
+        margin-top: 20px;
+        font-size: 16px;
+        background-color: #1d1e1f;
+        padding: 20px;
+        border-radius: 10px;
+        line-height: 1.6;
+        /* To add some line spacing */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        /* Add a shadow effect */
+    }
+
+    .WorkExperience {
+        color: rgb(116, 114, 114);
+
+
+    }
+
+    .work {
+        background-color: #1d1e1f;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .About .first {
+        height: 240px;
+        width: 240px;
+        
+
+    }
+
+    /* Basic styles for the container */
+    .contact-details {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 600px;
+        margin-top: 40px;
+        margin-left: 30;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        align-items: flex-start;
+        display: flex;
+        /* Use flexbox to align items horizontally */
+
+
+
+    }
+
+    .contact-details .contact {
+        padding-left: 10px;
+
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    /* Styles for each row */
+    .contact-details .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+    }
+
+    /* Label style */
+    .contact-details label {
+        font-weight: bold;
+        color: grey
+    }
+
+    /* Span style (value) */
+    .contact-details span {
+
+        text-align: right;
+        color: white;
+        margin-left: 10px;
+    }
+
+    /* Optional: Add some spacing to the left of the value */
+    .contact-details span:not(:first-child) {
+        margin-left: 10px;
+    }
+</style>
+
+</html>
